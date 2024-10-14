@@ -25,6 +25,13 @@
         hr {
             margin: 20px 0;
         }
+        label {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
@@ -35,102 +42,25 @@
     </header>
 
     <main>
+        <!-- Sección de formulario con varios tipos de input -->
         <section>
-            <h2>&lt;!DOCTYPE&gt;</h2>
-            <p>La declaración <code>&lt;!DOCTYPE&gt;</code> define el tipo de documento y asegura que el navegador renderice la página correctamente. En HTML5 se usa simplemente <code>&lt;!DOCTYPE html&gt;</code>.</p>
-        </section>
-
-        <section>
-            <h2>&lt;html&gt;</h2>
-            <p>La etiqueta <code>&lt;html&gt;</code> es el contenedor principal de todo el contenido HTML. El atributo <code>lang</code> especifica el idioma del contenido.</p>
-        </section>
-
-        <section>
-            <h2>&lt;head&gt;</h2>
-            <p>La etiqueta <code>&lt;head&gt;</code> contiene metadatos sobre el documento, como el conjunto de caracteres (<code>&lt;meta charset="UTF-8"&gt;</code>), el título (<code>&lt;title&gt;</code>), y otros enlaces importantes como hojas de estilo o scripts.</p>
-        </section>
-
-        <section>
-            <h2>&lt;title&gt;</h2>
-            <p>La etiqueta <code>&lt;title&gt;</code> define el título de la página, que aparece en la pestaña del navegador.</p>
-        </section>
-
-        <section>
-            <h2>&lt;meta&gt;</h2>
-            <p>La etiqueta <code>&lt;meta&gt;</code> proporciona metadatos, como la codificación de caracteres (<code>&lt;meta charset="UTF-8"&gt;</code>) y descripciones para motores de búsqueda (<code>&lt;meta name="description" content="..."></code>).</p>
-        </section>
-
-        <section>
-            <h2>&lt;body&gt;</h2>
-            <p>La etiqueta <code>&lt;body&gt;</code> contiene todo el contenido visible en la página web, como texto, imágenes, enlaces, etc.</p>
-        </section>
-
-        <section>
-            <h2>&lt;h1&gt; a &lt;h6&gt;</h2>
-            <p>Las etiquetas de encabezado <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> se utilizan para definir títulos y subtítulos, siendo <code>&lt;h1&gt;</code> el nivel más alto y <code>&lt;h6&gt;</code> el más bajo.</p>
-        </section>
-
-        <section>
-            <h2>&lt;p&gt;</h2>
-            <p>La etiqueta <code>&lt;p&gt;</code> se usa para definir párrafos de texto.</p>
-        </section>
-
-        <section>
-            <h2>&lt;a&gt;</h2>
-            <p>La etiqueta <code>&lt;a&gt;</code> define un enlace (hipervínculo). El atributo <code>href</code> especifica la URL a la que apunta el enlace. Ejemplo: <code>&lt;a href="https://www.example.com"&gt;Visitar Ejemplo&lt;/a&gt;</code>.</p>
-        </section>
-
-        <section>
-            <h2>&lt;img&gt;</h2>
-            <p>La etiqueta <code>&lt;img&gt;</code> se utiliza para insertar imágenes en la página. El atributo <code>src</code> define la ruta de la imagen y <code>alt</code> proporciona texto alternativo. Ejemplo: <code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code>.</p>
-        </section>
-
-        <section>
-            <h2>&lt;ul&gt;, &lt;ol&gt; y &lt;li&gt;</h2>
-            <p>Las etiquetas <code>&lt;ul&gt;</code> (lista desordenada) y <code>&lt;ol&gt;</code> (lista ordenada) se utilizan para crear listas. Los elementos de la lista se definen con <code>&lt;li&gt;</code>.</p>
-            <ul>
-                <li>Elemento de una lista desordenada</li>
-                <li>Otro elemento</li>
-            </ul>
-            <ol>
-                <li>Elemento de una lista ordenada</li>
-                <li>Otro elemento</li>
-            </ol>
-        </section>
-
-        <section>
-            <h2>&lt;div&gt; y &lt;span&gt;</h2>
-            <p>Las etiquetas <code>&lt;div&gt;</code> y <code>&lt;span&gt;</code> son contenedores genéricos. <code>&lt;div&gt;</code> es un bloque que ocupa todo el ancho disponible, mientras que <code>&lt;span&gt;</code> es un contenedor en línea que solo ocupa el espacio de su contenido.</p>
-        </section>
-
-        <section>
-            <h2>&lt;form&gt; y &lt;input&gt;</h2>
-            <p>La etiqueta <code>&lt;form&gt;</code> define un formulario de entrada de datos, y <code>&lt;input&gt;</code> se utiliza para crear campos de entrada. Ejemplo:</p>
-            <form action="#" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
-                <br>
-                <label for="email">Correo:</label>
-                <input type="email" id="email" name="email" placeholder="Ingresa tu correo">
-                <br>
-                <input type="submit" value="Enviar">
-            </form>
-        </section>
-                <section>
-            <h2>&lt;form&gt; y &lt;input&gt; (continuación)</h2>
-            <p>Aquí tienes más ejemplos de tipos de entradas en formularios.</p>
+            <h2>&lt;form&gt; y &lt;input&gt; (con varios tipos)</h2>
+            <p>Aquí tienes ejemplos de varios tipos de entradas en formularios, incluyendo texto, radio buttons, checkboxes, imágenes y una lista desplegable.</p>
             
             <form action="#" method="post">
+                <!-- Campo de texto -->
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
                 </div>
 
+                <!-- Campo de email -->
                 <div class="form-group">
                     <label for="email">Correo:</label>
                     <input type="email" id="email" name="email" placeholder="Ingresa tu correo">
                 </div>
 
+                <!-- Radio buttons (género) -->
                 <div class="form-group">
                     <label for="genero">Género:</label>
                     <input type="radio" id="masculino" name="genero" value="masculino">
@@ -139,6 +69,7 @@
                     <label for="femenino">Femenino</label>
                 </div>
 
+                <!-- Checkboxes (intereses) -->
                 <div class="form-group">
                     <label for="intereses">Intereses:</label>
                     <input type="checkbox" id="deporte" name="intereses" value="deporte">
@@ -149,11 +80,25 @@
                     <label for="tecnologia">Tecnología</label>
                 </div>
 
+                <!-- Input para subir imagen -->
                 <div class="form-group">
                     <label for="imagen">Sube una imagen:</label>
                     <input type="file" id="imagen" name="imagen" accept="image/*">
                 </div>
 
+                <!-- Dropdown (select) para país -->
+                <div class="form-group">
+                    <label for="pais">Selecciona tu país:</label>
+                    <select id="pais" name="pais">
+                        <option value="argentina">Argentina</option>
+                        <option value="mexico">México</option>
+                        <option value="espana">España</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="chile">Chile</option>
+                    </select>
+                </div>
+
+                <!-- Botón de envío -->
                 <div class="form-group">
                     <input type="submit" value="Enviar">
                 </div>
@@ -162,6 +107,7 @@
 
         <hr>
 
+        <!-- Sección de tablas -->
         <section>
             <h2>&lt;table&gt;</h2>
             <p>La etiqueta <code>&lt;table&gt;</code> se utiliza para crear tablas. Los elementos <code>&lt;tr&gt;</code> (fila), <code>&lt;th&gt;</code> (encabezado de columna) y <code>&lt;td&gt;</code> (celda) son parte de la estructura de una tabla.</p>
@@ -179,30 +125,6 @@
                     <td>30</td>
                 </tr>
             </table>
-        </section>
-
-        <section>
-            <h2>&lt;table&gt;</h2>
-            <p>La etiqueta <code>&lt;table&gt;</code> se utiliza para crear tablas. Los elementos <code>&lt;tr&gt;</code> (fila), <code>&lt;th&gt;</code> (encabezado de columna) y <code>&lt;td&gt;</code> (celda) son parte de la estructura de una tabla.</p>
-            <table border="1">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Edad</th>
-                </tr>
-                <tr>
-                    <td>Juan</td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td>María</td>
-                    <td>30</td>
-                </tr>
-            </table>
-        </section>
-
-        <section>
-            <h2>&lt;footer&gt;</h2>
-            <p>La etiqueta <code>&lt;footer&gt;</code> se utiliza para definir el pie de página de un documento o sección, generalmente con información sobre el autor o enlaces adicionales.</p>
         </section>
     </main>
 
